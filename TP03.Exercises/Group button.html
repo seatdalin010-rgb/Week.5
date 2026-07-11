@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group button</title>
+</head>
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 40px;
+  }
+  .box {
+    border: 3px solid #000;
+    padding: 20px;
+    margin-bottom: 25px;
+    width: 300px;
+  }
+  .button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 6px 16px;
+    cursor: pointer;
+  }
+  .h-left {
+    background-color: #1677ff;
+    color: white;
+    border: 1px solid #1677ff;
+    border-radius: 4px 0 0 4px;
+  }
+  .h-middle {
+    background-color: #1677ff;
+    color: white;
+    border: 1px solid #1677ff;
+    border-left: none;
+  }
+  .h-right {
+    background-color: #1677ff;
+    color: white;
+    border: 1px solid #1677ff;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+  }
+  .p-btn {
+    background-color: white;
+    color: gray;
+    border: 1px solid #d9d9d9;
+    width: 34px;
+    height: 34px;
+  }
+  .p-first {
+    border-radius: 4px 0 0 4px;
+  }
+  .p-middle {
+    border-left: none;
+  }
+  .p-last {
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+  }
+  .p-active {
+    background-color: gray;
+    color: white;
+    border: 1px solid gray;
+  }
+  .v-btn {
+    background-color: #1677ff;
+    color: white;
+    border: 1px solid #1677ff;
+    display: block;
+    width: 90px;
+    padding: 8px 0;
+  }
+  .v-top {
+    border-radius: 4px 4px 0 0;
+  }
+  .v-middle {
+    border-top: none;
+  }
+  .v-bottom {
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+  }
+</style>
+</head>
+<body>
+  <div class="box">
+    <button class="h-left">Left</button><button class="h-middle">Middle</button><button class="h-right">Right</button>
+  </div>
+  <div class="box">
+    <button class="p-btn p-first">1</button><button class="p-btn p-middle">2</button><button class="p-btn p-middle">3</button><button class="p-btn p-last p-active">4</button>
+  </div>
+  <div class="box">
+    <button class="v-btn v-top">Button</button>
+    <button class="v-btn v-middle">Button</button>
+    <button class="v-btn v-middle">Button</button>
+    <button class="v-btn v-middle">Button</button>
+    <button class="v-btn v-middle">Button</button>
+    <button class="v-btn v-bottom">Button</button>
+  </div>
+</body>
+</html>

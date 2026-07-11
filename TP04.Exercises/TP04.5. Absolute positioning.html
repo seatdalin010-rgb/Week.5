@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>absolute possitioning </title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 30px;
+    }
+    .row {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+    .wrapper {
+        width: 200px;
+        height: 200px;
+        background-color: #D9D9D9;
+        border: 1px solid #bbb;
+        position: relative;
+    }
+    .box {
+        width: 50px;
+        height: 50px;
+        background-color: #1F5C7A;
+        border: 3px solid #FF8A00;
+        box-sizing: border-box;
+        position: absolute;
+    }
+    .w1 .box1 { left: 0px;   top: 75px; }
+    .w1 .box2 { left: 50px;  top: 75px; }
+    .w1 .box3 { left: 100px; top: 75px; }
+    .w2 .box1 { top: 0px;   left: 75px; }
+    .w2 .box2 { top: 50px;  left: 75px; }
+    .w2 .box3 { top: 100px; left: 75px; }
+    .w3 .box1 { left: 0px;   bottom: 0px; }
+    .w3 .box2 { left: 50px;  bottom: 0px; }
+    .w3 .box3 { left: 100px; bottom: 0px; }
+    .w4 .box1 { top: 0px;   right: 0px; }
+    .w4 .box2 { top: 50px;  right: 0px; }
+    .w4 .box3 { top: 100px; right: 0px; }
+</style>
+<body>
+    <div class="row">
+        <div class="wrapper w1">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+        </div>
+        <div class="wrapper w2">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="wrapper w3">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+        </div>
+        <div class="wrapper w4">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP04.4 Row and Column </title>
+<style>
+    body {
+        margin: 40px auto;
+        width: 900px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        gap: 60px;
+        font-family: Arial, sans-serif;
+        color: #555;
+    }
+    .diagram {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .top-labels {
+        display: flex;
+        justify-content: space-between;
+        width: 200px;
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+    .diagram-row {
+        display: flex;
+        align-items: center;
+    }
+    .height-label {
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        font-size: 13px;
+        margin-left: 10px;
+    }
+    .wrapper {
+        width: 200px;
+        height: 200px;
+        background-color: #D9D9D9;
+        padding: 5px;
+        display: flex;
+        gap: 5px;
+    }
+    .box-orange {
+        background-color: #FF8A00;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sub-parent-orange {
+        background-color: #FF8A00;
+        display: flex;
+        gap: 5px;
+    }
+    .box-blue {
+        background-color: #2C5F74;
+        flex: 1;
+    }
+    .wrapper-1 {
+        flex-direction: row;
+    }
+    .wrapper-1 .box-orange {
+        flex: 4;
+        height: 100%;
+    }
+    .wrapper-1 .sub-parent-orange {
+        flex: 3;
+        flex-direction: column;
+        height: 100%;
+    }
+    .wrapper-2 {
+        flex-direction: column;
+    }
+    .wrapper-2 .box-orange {
+        flex: 4;
+        width: 100%;
+    }
+    .wrapper-2 .sub-parent-orange {
+        flex: 3;
+        flex-direction: row;
+        width: 100%;
+    }
+    .wrapper-3 {
+        flex-direction: row;
+    }
+    .wrapper-3 .left-area {
+        flex: 7;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .wrapper-3 .left-top {
+        flex: 4;
+        width: 100%;
+    }
+    .wrapper-3 .left-bottom {
+        flex: 6;
+        display: flex;
+        gap: 5px;
+    }
+    .wrapper-3 .left-bottom-stack {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .wrapper-3 .left-bottom-stack .box-orange {
+        flex: 1;
+    }
+    .wrapper-3 .left-bottom-tall {
+        flex: 1;
+        height: 100%;
+    }
+    .wrapper-3 .right-area {
+        flex: 4;
+        flex-direction: column;
+        height: 100%;
+    }
+    </style>
+</head>
+<body>
+    <div class="diagram">
+        <div class="top-labels"></div>
+        <div class="diagram-row">
+            <div class="wrapper wrapper-1">
+                <div class="box-orange"></div>
+                <div class="sub-parent-orange">
+                    <div class="box-blue"></div>
+                    <div class="box-blue"></div>
+                    <div class="box-blue"></div>
+                </div>
+                <div class="box-orange"></div>
+            </div>
+        </div>
+    </div>
+    <div class="diagram">
+        <div class="top-labels">
+        </div>
+        <div class="diagram-row">
+            <div class="wrapper wrapper-2">
+                <div class="box-orange"></div>
+                <div class="sub-parent-orange">
+                    <div class="box-blue"></div>
+                    <div class="box-blue"></div>
+                    <div class="box-blue"></div>
+                </div>
+                <div class="box-orange"></div>
+            </div>
+        </div>
+    </div>
+    <div class="diagram">
+        <div class="top-labels"></div>
+        <div class="diagram-row">
+            <div class="wrapper wrapper-3">
+                <div class="left-area">
+                    <div class="box-orange left-top"></div>
+                    <div class="left-bottom">
+                        <div class="left-bottom-stack">
+                            <div class="box-orange"></div>
+                            <div class="box-orange"></div>
+                        </div>
+                        <div class="box-orange left-bottom-tall"></div>
+                    </div>
+                </div>
+                <div class="sub-parent-orange right-area">
+                    <div class="box-blue"></div>
+                    <div class="box-blue"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

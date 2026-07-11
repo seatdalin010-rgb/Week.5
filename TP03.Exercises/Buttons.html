@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Button</title>
+    <style>
+    .BasicButtons{
+        border: 3px solid #000;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+        margin-bottom: 25px;
+        cursor: pointer;
+    }
+    .Button {
+        font-family: inherit;
+        font-size: 14px;
+        padding: 6px 16px;
+        border-radius: 4px;
+        border: 1px solid #d9d9d9;
+        background: #fff;
+        color: #333;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+    .Button-primary {
+        background: #1677ff;
+        border-color: #1677ff;
+        color: #fff;
+        cursor: pointer;
+    }
+    .Button-primary:hover {
+        background: #4096ff;
+    }
+    .Button-dashed {
+        border-style: dashed;
+        cursor: pointer;
+    }
+    .Button-text {
+        border: none;
+        background: none;
+    }
+    .Button-link {
+        border: none;
+        background: none;
+        color: #1677ff;
+        text-decoration: underline;
+        padding: 6px 4px;
+    }
+    .RoundedButtons {
+        border: 5px solid black;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+        margin-bottom: 25px;
+        
+    }
+    .Button-round {
+        border-radius: 20px;
+    }
+    .Button-circle {
+        border-radius: 50%;
+        width: 30px;
+        height: 34px;
+        padding: 0;
+        justify-content: center;
+    }
+    .Button-circle.filled {
+        background: #1677ff;
+        border-color: #1677ff;
+        color: #fff;
+    }
+    .icon {
+        width: 14px;
+        height: 14px;
+        
+    }
+    .blockButtons { 
+        border: 3px solid #000;
+        box-shadow: 5px 5px 10px black;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        align-items: stretch;
+        width: 520px;
+        margin-bottom: 25px;
+    }
+    .size {
+        width: 100%;
+        height: 34px;
+        margin-top: 0;
+    }
+    .primary {
+        background-color: #1677ff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .primary i {
+        margin-right: 5px;
+    }
+    .primary:hover {
+        background-color: #498ef0;
+    }
+    .default {
+        border-radius: 5px;
+        border: 1px gray solid;
+        cursor: pointer;
+        background-color: white;
+    }
+    .default:hover {
+        border: 2px #498ef0 solid;
+        color: #498ef0;
+    }
+    .dashed {
+        border-radius: 5px;
+        border: 1px gray dashed;
+        cursor: pointer;
+        background-color: white;
+    }
+    .dashed:hover {
+        border: 1px #498ef0 dashed;
+        color: #498ef0;
+    }
+    .size.disabled {
+        border-radius: 5px;
+        border: 1px gray solid;
+        background-color: #f5f5f5;
+        opacity: 50%;
+    }
+    .disabled:hover {
+        cursor: not-allowed;
+    }
+    .size text-btn {
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+    .size link-btn {
+        border: none;
+        background: none;
+        color: #1677ff;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <div class="BasicButtons">
+        <button class="Button Button-primary">Primary Button</button>
+        <button class="Button">Default Button</button>
+        <button class="Button Button-dashed">Dashed Button</button>
+        <button class="Button Button-text">Text Button</button>
+        <button class="Button Button-link">Link Button</button>
+    </div>
+    <div class="RoundedButtons">
+        <button class="Button Button-circle filled">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="Button Button-circle filled">A</button>
+        <button class="Button Button-round Button-primary">
+            <i class="fa-solid fa-magnifying-glass"></i>Search
+        </button>
+        <button class="Button Button-circle">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="Button Button-round">
+            <i class="fa-solid fa-magnifying-glass"></i>Search
+        </button>
+        <br>
+        <button class="Button Button-circle">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="Button Button-round">
+            <i class="fa-solid fa-magnifying-glass"></i>Search
+        </button>
+        <button class="Button Button-circle">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="Button Button-round">
+            <i class="fa-solid fa-magnifying-glass"></i>Search
+        </button>
+        <button class="Button Button-circle">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+    <div class="blockButtons">
+        <button class="size primary">Primary</button>
+        <button class="size default">Default</button>
+        <button class="size dashed">Dashed</button>
+        <button class="size disabled">disabled</button>
+        <button class="size text-btn">text</button>
+        <button class="size link-btn">Link</button>
+    </div>
+</body>
+</html>

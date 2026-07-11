@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .box {
+        border: 3px solid #000;
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+    .input {
+        width: 100%;
+        height: 32px;
+        padding: 4px 11px;
+        font-size: 14px;
+        border: 1px solid #d9d9d9;
+        border-radius: 6px;
+        box-sizing: border-box;
+        outline: none;
+    }
+    .input:hover {
+        border-color: #4096ff;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .input-icon {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        border: 1px solid #d9d9d9;
+        border-radius: 6px;
+        padding: 0 11px;
+        box-sizing: border-box;
+    }
+    .input-icon:hover {
+        border-color: #4096ff;
+    }
+    .input-icon input {
+        border: none;
+        outline: none;
+        font-size: 14px;
+        flex: 1;
+    }
+    .input-icon i {
+        color: #00000073;
+    }
+    .large {
+        height: 40px;
+    }
+    .default {
+        height: 32px;
+    }
+    .small {
+        height: 24px;
+    }
+    .small input {
+        font-size: 12px;
+    }
+    .group {
+        display: flex;
+    }
+    .group input {
+        height: 32px;
+        border: 1px solid #d9d9d9;
+        padding: 4px 11px;
+        font-size: 14px;
+        outline: none;
+        box-sizing: border-box;
+    }
+    .group input:hover {
+        border-color: #4096ff;
+        z-index: 1;
+        position: relative;
+    }
+    .group .prefix-box {
+        width: 70px;
+        border-radius: 6px 0 0 6px;
+        border-right: none;
+        text-align: center;
+        background: #fafafa;
+        flex: none;
+    }
+    .group .main-box {
+        flex: 1;
+        border-radius: 0 6px 6px 0;
+    }
+
+    .search-group {
+        display: flex;
+        width: 100%;
+    }
+    .search-group .prefix-box {
+        width: 70px;
+        border-radius: 6px 0 0 6px;
+        border-right: none;
+        text-align: center;
+        background: #fafafa;
+        flex: none;
+        height: 32px;
+        border: 1px solid #d9d9d9;
+        padding: 4px 11px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+    .search-group input {
+        flex: 1;
+        height: 32px;
+        border: 1px solid #d9d9d9;
+        border-left: none;
+        padding: 4px 11px;
+        font-size: 14px;
+        outline: none;
+        box-sizing: border-box;
+    }
+    .search-group .search-btn {
+        width: 40px;
+        height: 32px;
+        border: 1px solid #d9d9d9;
+        border-left: none;
+        border-radius: 0 6px 6px 0;
+        background: #fafafa;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #00000073;
+    }
+    .search-group .search-btn:hover {
+        color: #1677ff;
+    }
+    .combine-group {
+        display: flex;
+        gap: 8px;
+    }
+    .combine-group input {
+        flex: 1;
+        height: 32px;
+        border: 1px solid #d9d9d9;
+        border-radius: 6px;
+        padding: 4px 11px;
+        font-size: 14px;
+        outline: none;
+        box-sizing: border-box;
+    }
+    .combine-group .submit-btn {
+        height: 32px;
+        padding: 0 16px;
+        border: none;
+        border-radius: 6px;
+        background: #1677ff;
+        color: #fff;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .combine-group .submit-btn:hover {
+        background: #4096ff;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <input type="text" class="input" placeholder="Basic usage">
+    </div>
+    <div class="box row">
+        <div class="input-icon large">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" placeholder="large size">
+        </div>
+        <div class="input-icon default">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" placeholder="default size">
+        </div>
+        <div class="input-icon small">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" placeholder="small size">
+        </div>
+    </div>
+    <div class="box row">
+        <input type="text" class="input" value="26888888">
+        <div class="group">
+            <input type="text" class="prefix-box" value="0571">
+            <input type="text" class="main-box" value="26888888">
+        </div>
+        <div class="search-group">
+            <div class="prefix-box">https://</div>
+            <input type="text" placeholder="input search text">
+            <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="combine-group">
+            <input type="text" placeholder="Combine input and button">
+            <button class="submit-btn">Submit</button>
+        </div>
+    </div>
+</body>
+</html>

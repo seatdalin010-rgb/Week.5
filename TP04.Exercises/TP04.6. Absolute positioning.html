@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP04.6 absolute Positioning</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 40px;
+    }
+    .diagram {
+        margin-bottom: 100px;
+    }
+    .labels {
+        display: flex;
+        gap: 100px;
+        font-size: 13px;
+        color: #555;
+        margin-bottom: 8px;
+    }
+    .wrapper {
+        width: 200px;
+        height: 200px;
+        background-color: #D9D9D9;
+        position: relative;
+    }
+    .box {
+        width: 120px;
+        height: 120px;
+        background-color: #FF8A00;
+        position: absolute;
+    }
+    .box-top-left {
+        top: 0px;
+        left: 0px;
+        translate: -50% -50%;
+    }
+    .box-bottom-right {
+        bottom: 0px;
+        right: 0px;
+        translate: 50% 50%;
+    }
+</style>
+<body>
+    <div class="diagram">
+        <div class="labels"></div>
+        <div class="wrapper">
+            <div class="box box-top-left"></div>
+        </div>
+    </div>
+    <div class="diagram">
+        <div class="labels"></div>
+        <div class="wrapper">
+            <div class="box box-bottom-right"></div>
+        </div>
+    </div>
+</body>
+</html>
